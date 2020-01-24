@@ -1,12 +1,10 @@
 body {
   background-color: black;
-  background-image: radial-gradient(
-    rgba(0, 150, 0, 0.75), black 120%
-  );
-  height: 100vh;
+  /* background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%); */
+  height: 100%;
   margin: 0;
   overflow: hidden;
-  padding: 2rem;
+  padding: 0;
   color: white;
   font: 1.3rem Inconsolata, monospace;
   text-shadow: 0 0 5px #C8C8C8;
@@ -33,4 +31,28 @@ body {
 }
 pre {
   margin: 0;
+}
+
+div {
+  height: 100%;
+  min-height: 100%;
+}
+
+.input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%);
+}
+.output {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: none;
+  background-image: radial-gradient(rgb(173, 7, 7), black 120%);
+}
+
+form {
+  margin-left: 40px;
+  margin-top: 20px;
 }

@@ -28,13 +28,25 @@ $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
     var userInput = $("input#number").val();
-    if (!isNaN(userInput)) {
+    if (!isNaN(userInput) && userInput) {
       var outputs = beepboop(userInput);
       outputs.forEach(function(output) {
         $("ul").append("<li>"+output+"</li>")
+        $(".input").fadeOut();
+        $(".output").fadeIn();
       });
     } else {
-      alert("Please keep it to numbers. And be positive.");
+      $(".output").fadeToggle();
+      setTimeout(function() {
+        alert("Please keep it to numbers. And be positive.");
+      }, 450)
+      $(".output").fadeToggle();
+      $(".input").fadeIn();
     }
   });
+  $("button.btn-danger").click(function(){
+    event.preventDefault();
+    $(".output").fadeToggle();
+    $(".input").fadeToggle();
+  })
 });
