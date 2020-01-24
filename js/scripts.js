@@ -31,20 +31,21 @@ $(document).ready(function() {
     var userInput = $("input#number").val();
     if (!isNaN(userInput) && userInput) {
       var outputs = beepboop(userInput);
+      if ($("input:radio[name=reverse]:checked")){
+        outputs = outputs.reverse();
+      }
       outputs.forEach(function(output) {
         $("ul").append("<li>"+output+"</li>")
         $(".input").fadeOut();
         $(".output").fadeIn();
       });
     } else {
-      $(".output").fadeToggle();
-      setTimeout(function() {
-        alert("Please keep it to numbers. And be positive.");
-      }, 450)
-      $(".output").fadeToggle();
-      $(".input").fadeIn();
+      $(".input").fadeOut();
+      $(".output").fadeIn();
+      $("ul").append("<li>Please keep it to numbers. And be positive.</li>");
     }
   });
+  
   $("button.btn-danger").click(function(){
     event.preventDefault();
     $(".output").fadeToggle();

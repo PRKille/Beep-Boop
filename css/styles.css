@@ -53,12 +53,19 @@ div {
 }
 
 form {
-  margin-right: 40%;
+  margin-right: 35%;
   margin-left: 35%;
   margin-top: 40px;
 }
 
 #HAL {
   margin: 40px 35%;
+}
 
+button.btn-default {
+  margin-left: 35%;
+}
+
+button.btn-danger {
+  margin-left: 25%;
 }
