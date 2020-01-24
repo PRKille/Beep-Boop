@@ -53,6 +53,12 @@ div {
 }
 
 form {
-  margin-left: 40px;
-  margin-top: 20px;
+  margin-right: 40%;
+  margin-left: 35%;
+  margin-top: 40px;
+}
+
+#HAL {
+  margin: 40px 35%;
+
 }

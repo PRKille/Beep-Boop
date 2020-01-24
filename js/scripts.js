@@ -27,6 +27,7 @@ function replace(replaceNumbers) {
 $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
+    $("li").remove();
     var userInput = $("input#number").val();
     if (!isNaN(userInput) && userInput) {
       var outputs = beepboop(userInput);
