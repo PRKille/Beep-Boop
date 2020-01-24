@@ -5,35 +5,23 @@ function beepboop(inputNumber) {
     arrNumbers.push(i);
   }
   var arrStrings = arrNumbers.map(String);
-  replaceThree(arrStrings);
-  replaceTwo(arrStrings);
-  replaceOne(arrStrings);
+  replace(arrStrings);
   return arrStrings;
 }
 
-function replaceThree(threeNumbers) {
-  threeNumbers.forEach(function(threeNumber, index, arr){
-    if (threeNumber.includes("3")){
+function replace(replaceNumbers) {
+  replaceNumbers.forEach(function(replaceNumber, index, arr){
+    if (replaceNumber.includes("3")){
       arr[index] = "I'm sorry, Dave. I'm afraid I can't do that."
-    }
-  });
-}
-
-function replaceTwo(twoNumbers) {
-  twoNumbers.forEach(function(twoNumber, index, arr){
-    if (twoNumber.includes("2")){
+    } else if (replaceNumber.includes("2")){
       arr[index] = "Boop"
-    }
-  });
-}
-
-function replaceOne(oneNumbers) {
-  oneNumbers.forEach(function(oneNumber, index, arr){
-    if (oneNumber.includes("1")){
+    } else if (replaceNumber.includes("1")){
       arr[index] = "Beep"
     }
   });
 }
+
+
 
 // User Interface
 $(document).ready(function() {
@@ -41,8 +29,10 @@ $(document).ready(function() {
     event.preventDefault();
     var userInput = $("input#number").val();
     if (!isNaN(userInput)) {
-      var out = beepboop(userInput);
-      console.log("OUT:"+out)
+      var outputs = beepboop(userInput);
+      outputs.forEach(function(output) {
+        $("ul").append("<li>"+output+"</li>")
+      });
     } else {
       alert("Please keep it to numbers. And be positive.");
     }
