@@ -12,7 +12,7 @@ function beepboop(inputNumber) {
 function replace(replaceNumbers) {
   replaceNumbers.forEach(function(replaceNumber, index, arr){
     if (replaceNumber.includes("3")){
-      arr[index] = "I'm sorry, Dave. I'm afraid I can't do that."
+      arr[index] = "I'm sorry, <span></span> I'm afraid I can't do that."
     } else if (replaceNumber.includes("2")){
       arr[index] = "Boop"
     } else if (replaceNumber.includes("1")){
@@ -31,22 +31,21 @@ $(document).ready(function() {
     var userInput = $("input#number").val();
     if (!isNaN(userInput) && userInput) {
       var outputs = beepboop(userInput);
-      console.log($("input:checked").val())
       if ($("input:checked").val()){
         outputs = outputs.reverse();
         outputs.forEach(function(output) {
-          $("ul").append("<li>"+output+"</li>")
-          $()
+          $("ul").append("<li>"+output+"</li>");
           $(".input").fadeOut();
           $(".output").fadeIn();
         });
+        $("span").append($("input#name").val());
       } else {  
         outputs.forEach(function(output) {
-          $("ul").append("<li>"+output+"</li>")
-          $()
+          $("ul").append("<li>"+output+"</li>");
           $(".input").fadeOut();
           $(".output").fadeIn();
         });
+        $("span").append($("input#name").val());
       }
     } else {
       $(".input").fadeOut();
