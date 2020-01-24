@@ -5,8 +5,16 @@ function beepboop(inputNumber) {
     arrNumbers.push(i);
   }
   var arrStrings = arrNumbers.map(String)
-  console.log(arrStrings)
+  arrStrings = replaceThree(arrStrings)
   return arrStrings;
+}
+
+function replaceThree(threeNumbers) {
+  threeNumbers.forEach(function(threeNumber, index, arr){
+    if (threeNumber.includes("3")){
+      arr[index] = "I'm sorry, Dave. I'm afraid I can't do that."
+    }
+  });
 }
 
 // User Interface
