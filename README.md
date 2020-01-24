@@ -14,7 +14,6 @@ This webpage asks the user to input a number and returns a string substituting "
   * _First, clone this repository to your desktop by opening your terminal and entering the prompt "cd desktop" followed by pressing the enter(return) key. Then type "git clone https://github.com/PRKille/Beep-Boop.git" and press enter(return) again._
   * _Navigate to the programming-language-selector folder in either your terminal or by double clicking the folder on your desktop._
   * _Next open the index.html file in any web browser you choose._
-  * _Enjoy discovering the programming language for you!_
 2. Download
   * _In a web browswer navigate to https://github.com/PRKille/Beep-Boop.git._
   * _Click the green "Clone or download" button and selct "Download ZIP"_
