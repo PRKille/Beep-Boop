@@ -31,14 +31,23 @@ $(document).ready(function() {
     var userInput = $("input#number").val();
     if (!isNaN(userInput) && userInput) {
       var outputs = beepboop(userInput);
-      if ($("input:radio[name=reverse]:checked")){
+      console.log($("input:checked").val())
+      if ($("input:checked").val()){
         outputs = outputs.reverse();
+        outputs.forEach(function(output) {
+          $("ul").append("<li>"+output+"</li>")
+          $()
+          $(".input").fadeOut();
+          $(".output").fadeIn();
+        });
+      } else {  
+        outputs.forEach(function(output) {
+          $("ul").append("<li>"+output+"</li>")
+          $()
+          $(".input").fadeOut();
+          $(".output").fadeIn();
+        });
       }
-      outputs.forEach(function(output) {
-        $("ul").append("<li>"+output+"</li>")
-        $(".input").fadeOut();
-        $(".output").fadeIn();
-      });
     } else {
       $(".input").fadeOut();
       $(".output").fadeIn();
