@@ -1,4 +1,4 @@
-//Business
+//Business Logic
 function beepboop(inputNumber) {
   var arrNumbers = [];
   for(let i = 0; i <= parseInt(inputNumber); i++) {
@@ -12,18 +12,16 @@ function beepboop(inputNumber) {
 function replace(replaceNumbers) {
   replaceNumbers.forEach(function(replaceNumber, index, arr){
     if (replaceNumber.includes("3")){
-      arr[index] = "I'm sorry, <span></span> I'm afraid I can't do that."
+      arr[index] = "I'm sorry, <span></span> I'm afraid I can't do that.";
     } else if (replaceNumber.includes("2")){
-      arr[index] = "Boop"
+      arr[index] = "Boop";
     } else if (replaceNumber.includes("1")){
-      arr[index] = "Beep"
+      arr[index] = "Beep";
     }
   });
 }
 
-
-
-// User Interface
+// User Interface Logic
 $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();

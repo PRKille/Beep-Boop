@@ -39,12 +39,14 @@ div {
 }
 
 .input {
+  overflow: scroll;
   position: absolute;
   height: 100%;
   width: 100%;
   background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%);
 }
 .output {
+  overflow: scroll;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -68,4 +70,8 @@ button.btn-default {
 
 button.btn-danger {
   margin-left: 25%;
+}
+
+.checkbox {
+  margin-left: 23%;
 }
