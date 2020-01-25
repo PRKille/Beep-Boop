@@ -19,7 +19,7 @@ This webpage asks the user to input a number and returns a string substituting "
   * _Click the green "Clone or download" button and selct "Download ZIP"_
   * _Open the file and double click the "index.html" file to open the quiz!_
 3. GitHub Pages
-  * _You may also view the page by [clicking here](PRKille.github.i0/Beep-Boop)._
+  * _You may also view the page by [clicking here](https://prkille.github.io/Beep-Boop/)._
 
 ## Specs
 
